@@ -1,0 +1,38 @@
+{
+  "gesture_names": [
+    "ArmFlapping",
+    "HeadBanging",
+    "Spinning"
+  ],
+  "sequence_length": 16,
+  "img_size": [
+    224,
+    224
+  ],
+  "model_architecture": "BinaryGestureClassifier",
+  "input_shape": [
+    16,
+    3,
+    224,
+    224
+  ],
+  "output_shape": [
+    2
+  ],
+  "preprocessing": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "resize": [
+      224,
+      224
+    ]
+  }
+}
