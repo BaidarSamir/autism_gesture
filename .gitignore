@@ -1,0 +1,50 @@
+# Large model files
+*.pth
+*.onnx
+*.pt
+*.h5
+*.model
+*.pb
+*.tflite
+*.weights
+*.bin
+*.zip
+*.tar.gz
+
+# Checkpoints
+checkpoints/
+*/checkpoints/
+*.ckpt
+
+# Large datasets
+data/
+datasets/
+Ai_model/clipping_ssbd_videos/ssbd_raw/
+Ai_model/clipping_ssbd_videos/ssbd_clip/
+Ai_model/clipping_ssbd_videos/ssbd_clip_segment/
+
+# Cached files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Specific model files
+Ai_model/clipping_ssbd_videos/utism_gesture_api.zip
+Ai_model/clipping_ssbd_videos/autism_gesture_ensemble.pth
+Ai_model/clipping_ssbd_videos/binary_classifier_armflapping.pth
+Ai_model/clipping_ssbd_videos/binary_classifier_headbanging.pth
+Ai_model/clipping_ssbd_videos/binary_classifier_spinning.pth
+exported_models.zip
+Ai_model/clipping_ssbd_videos/autism_gesture_api.zip
+
+# Log files
+*.log
+logs/
+tensorboard/
+runs/
+
+# Environment
+.env
+venv/
+env/
