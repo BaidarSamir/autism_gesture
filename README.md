@@ -48,18 +48,22 @@ Note: Earlier notes may reference Flask; this codebase uses FastAPI.
 - Endpoints:
   - `GET /health` → `{ "status": "healthy", "model_loaded": true }`
   - `POST /predict` (multipart/form-data, field name `file`, accepts MP4/AVI)
-- Response shape:
+- Response example (valid JSON):
 ```json
 {
-  "primary_gesture": "ArmFlapping" | "HeadBanging" | "Spinning" | "None",
-  "primary_confidence": <float>,
+  "primary_gesture": "ArmFlapping",
+  "primary_confidence": 0.87,
   "detailed_confidences": {
-    "ArmFlapping": <float>,
-    "HeadBanging": <float>,
-    "Spinning": <float>
+    "ArmFlapping": 0.87,
+    "HeadBanging": 0.12,
+    "Spinning": 0.05
   }
 }
 ```
+- Field types
+  - primary_gesture: string, one of ["ArmFlapping", "HeadBanging", "Spinning", "None"]
+  - primary_confidence: number in [0, 1]
+  - detailed_confidences: object with gesture names as keys and confidence numbers in [0, 1]
 - Run locally (WSL Ubuntu or Windows Python):
 ```bash
 cd clipping_ssbd_videos/autism_gesture_api
